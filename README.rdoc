@@ -1,6 +1,8 @@
 = extended_observers
 
-Description goes here.
+I needed to use an observer to observe multiple models, but only wanted to observe certain sets of changes on each one. There was also a bug where calling observe twice in an ActiveRecord Observer would clear out any previous list of observed classes. This patch adds both the :on option and refactors the workings of the observe method to not clear out models from previous declarations
+
+See also: https://rails.lighthouseapp.com/projects/8994-ruby-on-rails/tickets/1639
 
 == Copyright
 
